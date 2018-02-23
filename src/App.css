@@ -1,0 +1,63 @@
+.App {
+  padding: 10px;
+  display: flex;
+  text-align: center;
+}
+
+.LeftPart {
+  background-color: hsla(230, 30%, 50%, 0.17);
+  border-radius: 5px;
+  border: solid 1px #888;
+  width: 50%;
+  padding: 10px;
+}
+
+.RightPart {
+  width: 50%;
+  padding: 0 10px 0 20px;
+  text-align: left;
+}
+
+.Cnt {
+  width: 80%;
+  display: inline-block;
+  margin: auto;
+}
+
+.Accordion {
+  border-radius: 5px;
+  border: solid 1px #888;
+  background-color: hsla(230, 30%, 50%, 0.17);
+  margin: 1px;
+  padding: 5px;
+  text-align: left;
+}
+
+.AccordionSection {
+  border-radius: 5px;
+  border: solid 1px #888;
+  background-color: hsla(230, 30%, 50%, 0.17);
+  margin: 2px;
+  padding: 5px;
+}
+
+.Flex {
+  display: flex;
+}
+
+.Element {
+  border-radius: 5px;
+  border-color: white;
+  border-style: dashed;
+  border-width: 1px;
+  margin: 2px;
+  padding: 2px;
+  background-color: hsla(230, 30%, 50%, 0.17);
+}
+
+.BodyElement {
+  border-radius: 5px;
+  margin: 4px 2px;
+  background-color: #ffc;
+  padding: 2px;
+}
