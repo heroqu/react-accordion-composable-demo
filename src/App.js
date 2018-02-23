@@ -163,7 +163,7 @@ class App extends Component {
             First two buttons switch `Accordion mode` On and Off. When in
             Accordion mode no more then one section can be expanded. Selecting
             other section would collapse previously expanded one. When Accordion
-            mode is Off then all the sections behave independantly and one can
+            mode is Off then all the sections behave independently and one can
             expand any number of sections.
           </p>
           <p>
