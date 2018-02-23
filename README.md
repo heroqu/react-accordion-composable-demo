@@ -1,4 +1,6 @@
-# Demo for [react-accordion-composable](https://github.com/heroqu/react-accordion-composable)
+# Demo for react-accordion-composable
+
+The npm is here: [react-accordion-composable](https://www.npmjs.com/package/react-accordion-composable)
 
 ## Installation
 
