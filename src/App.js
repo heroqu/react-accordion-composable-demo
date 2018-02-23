@@ -169,10 +169,9 @@ class App extends Component {
           <p>
             Last button is an example of sending a message with a list of 2
             actions: `Select section 3 (in whatever mode that is current)` and
-            then `set Accordion mode to Off`. The order of action is important.
+            then `set Accordion mode to Off`. The order of actions is important.
             One can send any sequence of actions (=commands) to Accordion, but
-            in this particular case two is always enough to attain any state
-            desired.
+            two should be enough to attain any state desired.
           </p>
 
           <p>
