@@ -132,7 +132,7 @@ class App extends Component {
             <li>
               <a
                 href="https://github.com/heroqu/react-accordion-composable-demo"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
               >
                 demo repo
               </a>
@@ -140,7 +140,7 @@ class App extends Component {
             <li>
               <a
                 href="https://github.com/heroqu/react-accordion-composable"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
               >
                 Accordion component repo
               </a>
@@ -148,7 +148,7 @@ class App extends Component {
             <li>
               <a
                 href="https://www.npmjs.com/package/react-accordion-composable"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
               >
                 Accordion component npm
               </a>
