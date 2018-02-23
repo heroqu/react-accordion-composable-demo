@@ -98,7 +98,7 @@ class App extends Component {
             <h3>Accordion:</h3>
             <Accordion className="Accordion" msg={this.state.accordionMsg}>
               <AccordionSection className="AccordionSection" id="1">
-                <h3 className="Element">Title 1 - a signgle element</h3>
+                <h3 className="Element">Title 1 - a single element</h3>
                 <p className="BodyElement">Body 1 - a single element</p>
               </AccordionSection>
               <AccordionSection className="AccordionSection" id="2">
