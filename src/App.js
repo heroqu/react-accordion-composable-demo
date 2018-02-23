@@ -132,7 +132,8 @@ class App extends Component {
             <li>
               <a
                 href="https://github.com/heroqu/react-accordion-composable-demo"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 demo repo
               </a>
@@ -140,7 +141,8 @@ class App extends Component {
             <li>
               <a
                 href="https://github.com/heroqu/react-accordion-composable"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Accordion component repo
               </a>
@@ -148,7 +150,8 @@ class App extends Component {
             <li>
               <a
                 href="https://www.npmjs.com/package/react-accordion-composable"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Accordion component npm
               </a>
@@ -173,7 +176,6 @@ class App extends Component {
             One can send any sequence of actions (=commands) to Accordion, but
             two should be enough to attain any state desired.
           </p>
-
           <p>
             Section 3 illustrates the fact that contents of both Title part and
             Body part are completely up to the user. The trick is that whatever
