@@ -61,69 +61,77 @@ class App extends Component {
     return (
       <div className="App">
         <div className="LeftPart">
-          <h3>Outside of Accordion</h3>
-
-          <button type="button" onClick={() => this.accordionOn()}>
-            Accordion On
-          </button>
-
-          {` : `}
-          <button type="button" onClick={() => this.accordionOff()}>
-            Accordion Off
-          </button>
-          {` : `}
-          <button type="button" onClick={() => this.collapseAll()}>
-            Collapse All
-          </button>
-          {` : `}
-          <button type="button" onClick={() => this.expandAll()}>
-            Expand All
-          </button>
-          {` : `}
-          <button type="button" onClick={() => this.select13()}>
-            Select 1 & 3
-          </button>
-          {` : `}
-          <button type="button" onClick={() => this.select3_and_AccordionOff()}>
-            Select 3 & Accordion Off
-          </button>
-          <p>
-            these buttons are all outside of the Accordion. They send messages
-            to Accordion component with list of actions to apply. These messages
-            are dispatched through a prop.
-          </p>
-          <hr />
-
           <div className="Cnt">
-            <h3>Accordion:</h3>
-            <Accordion className="Accordion" msg={this.state.accordionMsg}>
-              <AccordionSection className="AccordionSection" id="1">
-                <h3 className="Element">Title 1 - a single element</h3>
-                <p className="BodyElement">Body 1 - a single element</p>
-              </AccordionSection>
-              <AccordionSection className="AccordionSection" id="2">
-                <h3 className="Element">Title 2</h3>
-                <p className="BodyElement">Body 2</p>
-              </AccordionSection>
-              <AccordionSection className="AccordionSection" id="3">
-                <div className="Element">
-                  <div className="Flex Element">
-                    <h3 className="Flex Element">Title 3</h3>
-                    <h3 className="Flex Element"> - a complex element</h3>
+            <div className="Left">
+              <h3>Accordion:</h3>
+              <Accordion className="Accordion" msg={this.state.accordionMsg}>
+                <AccordionSection className="AccordionSection" id="1">
+                  <h3 className="Element">Title 1 - a single element</h3>
+                  <p className="BodyElement">Body 1 - a single element</p>
+                </AccordionSection>
+                <AccordionSection className="AccordionSection" id="2">
+                  <h3 className="Element">Title 2</h3>
+                  <p className="BodyElement">Body 2</p>
+                </AccordionSection>
+                <AccordionSection className="AccordionSection" id="3">
+                  <div className="Element">
+                    <div className="Flex Element">
+                      <h3 className="Flex Element">Title 3</h3>
+                      <h3 className="Flex Element"> - a complex element</h3>
+                    </div>
+                    <p className="Element">
+                      having a second row. We are still inside the title part.
+                    </p>
                   </div>
-                  <p className="Element">
-                    having a second row. We are still inside the title part.
+                  <p className="BodyElement">Body 3 - starts with 2nd Child</p>
+                  <p className="BodyElement">
+                    continues with 3d Child
+                    <br />
+                    <br />
+                    Lorem and Ipsum were here
                   </p>
-                </div>
-                <p className="BodyElement">Body 3 - starts with 2nd Child</p>
-                <p className="BodyElement">
-                  continues with 3d Child
-                  <br />
-                  <br />
-                  Lorem and Ipsum were here
-                </p>
-              </AccordionSection>
-            </Accordion>
+                </AccordionSection>
+              </Accordion>
+            </div>
+
+            <div className="Left">
+              <h3>Outside of Accordion</h3>
+              <button type="button" onClick={() => this.accordionOn()}>
+                Accordion On
+              </button>{' '}
+              - no more then one section can be expanded at a time<br />
+              <button type="button" onClick={() => this.accordionOff()}>
+                Accordion Off
+              </button>{' '}
+              - sections can be expanded / collapsed independently from one
+              another<br />
+              <button type="button" onClick={() => this.collapseAll()}>
+                Collapse All
+              </button>{' '}
+              - does also turn Accordion mode On<br />
+              <button type="button" onClick={() => this.expandAll()}>
+                Expand All
+              </button>{' '}
+              - does also turn Accordion mode Off<br />
+              <button type="button" onClick={() => this.select13()}>
+                Select 1 & 3
+              </button>{' '}
+              - expand only sections 1 and 3, turning Accordion mode Off<br />
+              <button
+                type="button"
+                onClick={() => this.select3_and_AccordionOff()}
+              >
+                Select 3 & Accordion Off
+              </button>{' '}
+              - expand only section 3, then, as additional action, turn
+              Accordion mode Off<br />
+              <hr />
+              <p>
+                These buttons are all outside of the Accordion. They send
+                messages to Accordion component with list of actions to apply.
+                These messages are dispatched through a prop.
+              </p>
+            </div>
           </div>
         </div>
         <div className="RightPart">
@@ -157,17 +165,18 @@ class App extends Component {
               </a>
             </li>
           </ul>
-
+          <h3>Controlling accordion from outside</h3>
           <p>
             While Accordion works autonomously, still we can influence it from
             outside if we like.
           </p>
           <p>
-            First two buttons switch `Accordion mode` On and Off. When in
-            Accordion mode no more then one section can be expanded. Selecting
-            other section would collapse previously expanded one. When Accordion
-            mode is Off then all the sections behave independently and one can
-            expand any number of sections.
+            First two buttons switch `Accordion mode` <strong>On</strong> and{' '}
+            <strong>Off</strong>. When in Accordion mode no more then one
+            section can be expanded. Selecting other section would collapse
+            previously expanded one. When Accordion mode is Off then all the
+            sections behave independently and one can expand any number of
+            sections.
           </p>
           <p>
             Last button is an example of sending a message with a list of 2
