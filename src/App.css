@@ -8,12 +8,12 @@
   background-color: hsla(230, 30%, 50%, 0.17);
   border-radius: 5px;
   border: solid 1px #888;
-  width: 50%;
+  width: 65%;
   padding: 10px;
 }
 
 .RightPart {
-  width: 50%;
+  width: 35%;
   padding: 0 10px 0 20px;
   text-align: left;
 }

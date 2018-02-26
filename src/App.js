@@ -63,38 +63,6 @@ class App extends Component {
         <div className="LeftPart">
           <div className="Cnt">
             <div className="Left">
-              <h3>Accordion:</h3>
-              <Accordion className="Accordion" msg={this.state.accordionMsg}>
-                <AccordionSection className="AccordionSection" id="1">
-                  <h3 className="Element">Title 1 - a single element</h3>
-                  <p className="BodyElement">Body 1 - a single element</p>
-                </AccordionSection>
-                <AccordionSection className="AccordionSection" id="2">
-                  <h3 className="Element">Title 2</h3>
-                  <p className="BodyElement">Body 2</p>
-                </AccordionSection>
-                <AccordionSection className="AccordionSection" id="3">
-                  <div className="Element">
-                    <div className="Flex Element">
-                      <h3 className="Flex Element">Title 3</h3>
-                      <h3 className="Flex Element"> - a complex element</h3>
-                    </div>
-                    <p className="Element">
-                      having a second row. We are still inside the title part.
-                    </p>
-                  </div>
-                  <p className="BodyElement">Body 3 - starts with 2nd Child</p>
-                  <p className="BodyElement">
-                    continues with 3d Child
-                    <br />
-                    <br />
-                    Lorem and Ipsum were here
-                  </p>
-                </AccordionSection>
-              </Accordion>
-            </div>
-
-            <div className="Left">
               <h3>Outside of Accordion</h3>
               <button type="button" onClick={() => this.accordionOn()}>
                 Accordion On
@@ -131,6 +99,38 @@ class App extends Component {
                 messages to Accordion component with list of actions to apply.
                 These messages are dispatched through a prop.
               </p>
+            </div>
+
+            <div className="Left">
+              <h3>Accordion:</h3>
+              <Accordion className="Accordion" msg={this.state.accordionMsg}>
+                <AccordionSection className="AccordionSection" id="1">
+                  <h3 className="Element">Title 1 - a single element</h3>
+                  <p className="BodyElement">Body 1 - a single element</p>
+                </AccordionSection>
+                <AccordionSection className="AccordionSection" id="2">
+                  <h3 className="Element">Title 2</h3>
+                  <p className="BodyElement">Body 2</p>
+                </AccordionSection>
+                <AccordionSection className="AccordionSection" id="3">
+                  <div className="Element">
+                    <div className="Flex Element">
+                      <h3 className="Flex Element">Title 3</h3>
+                      <h3 className="Flex Element"> - a complex element</h3>
+                    </div>
+                    <p className="Element">
+                      having a second row. We are still inside the title part.
+                    </p>
+                  </div>
+                  <p className="BodyElement">Body 3 - starts with 2nd Child</p>
+                  <p className="BodyElement">
+                    continues with 3d Child
+                    <br />
+                    <br />
+                    Lorem and Ipsum were here
+                  </p>
+                </AccordionSection>
+              </Accordion>
             </div>
           </div>
         </div>
