@@ -5144,9 +5144,9 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-accordion-composable@^0.1.5:
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/react-accordion-composable/-/react-accordion-composable-0.1.5.tgz#0780969fe9dc9882d77f28b6d4a213d963571add"
+react-accordion-composable@^0.1.6:
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/react-accordion-composable/-/react-accordion-composable-0.1.6.tgz#10266d00e88d29a6b578c604f995172b9558631c"
 
 react-dev-utils@^5.0.0:
   version "5.0.0"
