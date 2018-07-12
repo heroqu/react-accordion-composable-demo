@@ -64,7 +64,7 @@ class App extends Component {
           <div className="Cnt">
             <div className="Left">
               <h3>Outside of Accordion</h3>
-              <h4>(click on the buttons and see the effect below)</h4>
+              <p className="Highlight">(click on the buttons and see the effect below)</p>
               <button type="button" onClick={() => this.accordionOn()}>
                 Accordion On
               </button>{' '}
@@ -104,7 +104,7 @@ class App extends Component {
 
             <div className="Left">
               <h3>Accordion:</h3>
-              <h4>(click title or body part of any section and see the effect)</h4>
+              <p className="Highlight">(click title or body part of any section and see the effect)</p>
               <Accordion className="Accordion" msg={this.state.accordionMsg}>
                 <AccordionSection className="AccordionSection" id="1">
                   <h3 className="Element">Title 1 - a single element</h3>
