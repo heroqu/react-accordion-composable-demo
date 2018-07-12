@@ -1,17 +1,34 @@
 # Demo for react-accordion-composable
 
-See this demo live [here](https://heroqu.github.io/react-accordion-composable-demo/) 
+See this demo live [here](https://heroqu.github.io/react-accordion-composable-demo/)
 
 The npm is here: [react-accordion-composable](https://www.npmjs.com/package/react-accordion-composable)
 
-## Installation
+## Running a local copy
 
-`npm install --save react-accordion-composable-demo`
+1. Clone the porject locally:
 
-## Usage
+`git clone https://github.com/heroqu/react-accordion-composable-demo.git`
 
-Run
+2. Go the the projects directory:
+
+`cd react-accordion-composable-demo`
+
+3. Install dependencies:
+
+`npm install --save`
+
+or
+
+`yarn`
+
+4. Start the server
 
 `npm start`
 
-and open in the browser [http://localhost:3000](http://localhost:3000)
+or
+
+`yarn start`
+
+5. Open the browser at
+and open in the browser
