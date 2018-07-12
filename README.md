@@ -30,4 +30,4 @@ or
 
 `yarn start`
 
-5. Open the browser at [http://localhost:3000/](http://localhost:3000/)
+5. Open the browser at [http://localhost:3000](http://localhost:3000)
