@@ -104,7 +104,7 @@ class App extends Component {
 
             <div className="Left">
               <h3>Accordion:</h3>
-              <p className="Highlight">(click title or body part of any section and see the effect)</p>
+              <p className="Highlight">(click title part of any section and see the effect)</p>
               <Accordion className="Accordion" msg={this.state.accordionMsg}>
                 <AccordionSection className="AccordionSection" id="1">
                   <h3 className="Element">Title 1 - a single element</h3>
