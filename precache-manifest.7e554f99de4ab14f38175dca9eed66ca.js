@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8c9bb905fd9de9826ee8c220684da1e8",
+    "revision": "5869e11da42d5850a758c72645dae907",
     "url": "/react-accordion-composable-demo/index.html"
   },
   {
-    "revision": "f67f48623d117c122319",
-    "url": "/react-accordion-composable-demo/static/css/main.ad0dd0fd.chunk.css"
+    "revision": "58e4e9cdb985a62a0606",
+    "url": "/react-accordion-composable-demo/static/css/main.9dae8f1c.chunk.css"
   },
   {
     "revision": "eb1d4bad3226be32b2f6",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-accordion-composable-demo/static/js/2.a4c94c94.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f67f48623d117c122319",
-    "url": "/react-accordion-composable-demo/static/js/main.74a1c2ea.chunk.js"
+    "revision": "58e4e9cdb985a62a0606",
+    "url": "/react-accordion-composable-demo/static/js/main.9b4464a6.chunk.js"
   },
   {
     "revision": "8af9d3871c21457fb0a3",
