@@ -66,7 +66,28 @@ const App = () => {
         <div className="Part PartRight">
           <h2>Controlling Accordion from outside:</h2>
           <p className="Highlight">(click on a button and see the effect)</p>
-          <div className="Button"
+
+          <div
+            className="Button"
+            onClick={() => accordionDispatch({ type: actionTypes.collapseAll })}
+          >
+            Collapse All
+          </div>
+          <div className="Explain">
+            Collapses all sections and turns Accordion mode ON
+          </div>
+          <div
+            className="Button"
+            onClick={() => accordionDispatch({ type: actionTypes.expandAll })}
+          >
+            Expand All
+          </div>
+          <div className="Explain">
+            Expands all sections and turns Accordion mode OFF
+          </div>
+
+          <div
+            className="Button"
             onClick={() => accordionDispatch({ type: actionTypes.accordionOn })}
           >
             Accordion On
@@ -77,7 +98,8 @@ const App = () => {
             sections are expanded and see that only the first of them stay
             expanded.
           </div>
-          <div className="c-button"
+          <div
+            className="Button"
             onClick={() =>
               accordionDispatch({ type: actionTypes.accordionOff })
             }
@@ -88,23 +110,9 @@ const App = () => {
             Makes all the sections independent: from now on each section can be
             expanded / collapsed without affecting siblings.
           </div>
-          <div className="Button"
-            onClick={() => accordionDispatch({ type: actionTypes.collapseAll })}
-          >
-            Collapse All
-          </div>
-          <div className="Explain">
-            Collapses all sections and turns Accordion mode ON
-          </div>
-          <div className="Button"
-            onClick={() => accordionDispatch({ type: actionTypes.expandAll })}
-          >
-            Expand All
-          </div>
-          <div className="Explain">
-            Expands all sections and turns Accordion mode OFF
-          </div>
-          <div className="Button"
+
+          <div
+            className="Button"
             onClick={() =>
               accordionDispatch({
                 type: actionTypes.selectIds,
@@ -117,7 +125,8 @@ const App = () => {
           <div className="Explain">
             Turns Accordion mode OFF and expands sections 1 and 3
           </div>
-          <div className="Button"
+          <div
+            className="Button"
             onClick={() =>
               accordionDispatch([
                 //
