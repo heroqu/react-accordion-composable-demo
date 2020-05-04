@@ -1,6 +1,22 @@
 {
-  "main.css": "static/css/main.a16e712e.css",
-  "main.css.map": "static/css/main.a16e712e.css.map",
-  "main.js": "static/js/main.01d1a988.js",
-  "main.js.map": "static/js/main.01d1a988.js.map"
+  "files": {
+    "main.css": "/react-accordion-composable-demo/static/css/main.ad0dd0fd.chunk.css",
+    "main.js": "/react-accordion-composable-demo/static/js/main.74a1c2ea.chunk.js",
+    "main.js.map": "/react-accordion-composable-demo/static/js/main.74a1c2ea.chunk.js.map",
+    "runtime-main.js": "/react-accordion-composable-demo/static/js/runtime-main.faf76cfb.js",
+    "runtime-main.js.map": "/react-accordion-composable-demo/static/js/runtime-main.faf76cfb.js.map",
+    "static/js/2.a4c94c94.chunk.js": "/react-accordion-composable-demo/static/js/2.a4c94c94.chunk.js",
+    "static/js/2.a4c94c94.chunk.js.map": "/react-accordion-composable-demo/static/js/2.a4c94c94.chunk.js.map",
+    "index.html": "/react-accordion-composable-demo/index.html",
+    "precache-manifest.88016e4e7af3c4a6d788d6d78101c2e9.js": "/react-accordion-composable-demo/precache-manifest.88016e4e7af3c4a6d788d6d78101c2e9.js",
+    "service-worker.js": "/react-accordion-composable-demo/service-worker.js",
+    "static/css/main.ad0dd0fd.chunk.css.map": "/react-accordion-composable-demo/static/css/main.ad0dd0fd.chunk.css.map",
+    "static/js/2.a4c94c94.chunk.js.LICENSE.txt": "/react-accordion-composable-demo/static/js/2.a4c94c94.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.faf76cfb.js",
+    "static/js/2.a4c94c94.chunk.js",
+    "static/css/main.ad0dd0fd.chunk.css",
+    "static/js/main.74a1c2ea.chunk.js"
+  ]
 }
