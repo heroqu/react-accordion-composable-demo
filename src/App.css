@@ -97,6 +97,15 @@
   padding: 0.4em;
 }
 
+.Flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.FlexElement {
+  flex: 1 1 auto;
+}
+
 .Highlight {
   font-size: 0.9em;
   color: #c03;

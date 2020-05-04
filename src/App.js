@@ -44,8 +44,8 @@ const App = () => {
             <AccordionSection className="AccordionSection" id="3">
               <div className="Element">
                 <div className="Flex Element">
-                  <h3 className="Flex Element">Title 3</h3>
-                  <h3 className="Flex Element"> - a complex element</h3>
+                  <h3 className="FlexElement Element">Title 3</h3>
+                  <h3 className="FlexElement Element"> - a complex element</h3>
                 </div>
                 <p className="Element">
                   having a second row. We are still inside the title part that
@@ -108,7 +108,8 @@ const App = () => {
           </div>
           <div className="Explain">
             Makes all the sections independent: from now on each section can be
-            expanded / collapsed without affecting siblings.
+            expanded / collapsed without affecting siblings. Clicking this
+            button produces no visible change on screen.
           </div>
 
           <div
@@ -157,12 +158,12 @@ const App = () => {
             outside if we like.
           </p>
           <p>
-            First two buttons switch `Accordion mode` <strong>On</strong> and{' '}
-            <strong>Off</strong>. When in Accordion mode no more then one
-            section can be expanded. Selecting other section would collapse
-            previously expanded one. When Accordion mode is Off then all the
-            sections behave independently and one can expand any number of
-            sections.
+            Buttons 3 and 4 are to switch Accordion mode <strong>ON</strong> and{' '}
+            <strong>OFF</strong>. When in Accordion mode no more then one
+            section can be expanded at any given time. Selecting a section would
+            collapse a previously expanded one, if any. When Accordion mode is
+            OFF then all the sections behave independently and any number of
+            section can be expanded simultaneously.
           </p>
           <p>
             Last button is an example of sending a message with a list of 2
