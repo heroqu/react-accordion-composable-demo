@@ -1,12 +1,12 @@
 {
   "name": "react-accordion-composable-demo",
-  "version": "0.1.3",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "react": "^16.4.1",
-    "react-accordion-composable": "^0.1.11",
-    "react-dom": "^16.4.1",
-    "react-scripts": "^1.1.4"
+    "react": "^16.13.1",
+    "react-accordion-composable": "^1.0.0",
+    "react-dom": "^16.13.1",
+    "react-scripts": "^3.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -19,5 +19,27 @@
   "homepage": "https://heroqu.github.io/react-accordion-composable-demo",
   "devDependencies": {
     "gh-pages": "^1.1.0"
+  },
+  "keywords": [
+    "React",
+    "Accordion",
+    "Accordeon",
+    "collapsible",
+    "component",
+    "demo"
+  ],
+  "author": "Heroqu",
+  "license": "MIT",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

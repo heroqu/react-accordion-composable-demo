@@ -1,173 +1,148 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react';
 import {
   Accordion,
   AccordionSection,
   actionTypes,
-  actionsToMsg
-} from 'react-accordion-composable'
-import './App.css'
+  actionsToMsg,
+} from 'react-accordion-composable';
+import './App.css';
 
-class App extends Component {
-  constructor(props, context) {
-    super(props, context)
+const App = () => {
+  const [state, setState] = useState({
+    accordionMsg: actionsToMsg({
+      type: actionTypes.selectIds,
+      ids: ['1', '2'],
+    }),
+  });
 
-    this.state = {
-      accordionMsg: actionsToMsg({
-        type: actionTypes.selectIds,
-        ids: ['1', '2']
-      })
-    }
-  }
+  const accordionDispatch = actions =>
+    setState({
+      accordionMsg: actionsToMsg(actions),
+    });
 
-  accordionDispatch(actions) {
-    this.setState({
-      accordionMsg: actionsToMsg(actions)
-    })
-  }
-
-  accordionOn() {
-    console.log(`App: accordionOn()`)
-    this.accordionDispatch({ type: actionTypes.accordionOn })
-  }
-  accordionOff() {
-    console.log(`App: accordionOff()`)
-    this.accordionDispatch({ type: actionTypes.accordionOff })
-  }
-  collapseAll() {
-    console.log(`App: collapseAll()`)
-    this.accordionDispatch({ type: actionTypes.collapseAll })
-  }
-  expandAll() {
-    console.log(`App: expandAll()`)
-    this.accordionDispatch({ type: actionTypes.expandAll })
-  }
-  select13() {
-    console.log(`App: select13()`)
-    this.accordionDispatch({ type: actionTypes.selectIds, ids: ['1', '3'] })
-  }
-
-  /**
-   * Example of dispatching more then one actions at a time
-   */
-  select3_and_AccordionOff() {
-    console.log(`App: select3_AccordionOn()`)
-    this.accordionDispatch([
-      { type: actionTypes.selectIds, ids: ['3'] },
-      { type: actionTypes.accordionOff }
-    ])
-  }
-
-  render() {
-    return (
-      <div className="App">
-        <div className="LeftPart">
-          <div className="Cnt">
-            <div className="Left">
-              <h3>Outside of Accordion</h3>
-              <p className="Highlight">(click on the buttons and see the effect below)</p>
-              <button type="button" onClick={() => this.accordionOn()}>
-                Accordion On
-              </button>{' '}
-              - no more then one section can be expanded at a time<br />
-              <button type="button" onClick={() => this.accordionOff()}>
-                Accordion Off
-              </button>{' '}
-              - sections can be expanded / collapsed independently from one
-              another<br />
-              <button type="button" onClick={() => this.collapseAll()}>
-                Collapse All
-              </button>{' '}
-              - does also turn Accordion mode On<br />
-              <button type="button" onClick={() => this.expandAll()}>
-                Expand All
-              </button>{' '}
-              - does also turn Accordion mode Off<br />
-              <button type="button" onClick={() => this.select13()}>
-                Select 1 & 3
-              </button>{' '}
-              - expand only sections 1 and 3, turning Accordion mode Off<br />
-              <button
-                type="button"
-                onClick={() => this.select3_and_AccordionOff()}
-              >
-                Select 3 & Accordion Off
-              </button>{' '}
-              - expand only section 3, then, as additional action, turn
-              Accordion mode Off<br />
-              <hr />
-              <p>
-                These buttons are all outside of the Accordion. They send
-                messages to Accordion component with list of actions to apply.
-                These messages are dispatched through a prop.
-              </p>
-            </div>
-
-            <div className="Left">
-              <h3>Accordion:</h3>
-              <p className="Highlight">(click title part of any section and see the effect)</p>
-              <Accordion className="Accordion" msg={this.state.accordionMsg}>
-                <AccordionSection className="AccordionSection" id="1">
-                  <h3 className="Element">Title 1 - a single element</h3>
-                  <p className="BodyElement">Body 1 - a single element</p>
-                </AccordionSection>
-                <AccordionSection className="AccordionSection" id="2">
-                  <h3 className="Element">Title 2</h3>
-                  <p className="BodyElement">Body 2</p>
-                </AccordionSection>
-                <AccordionSection className="AccordionSection" id="3">
-                  <div className="Element">
-                    <div className="Flex Element">
-                      <h3 className="Flex Element">Title 3</h3>
-                      <h3 className="Flex Element"> - a complex element</h3>
-                    </div>
-                    <p className="Element">
-                      having a second row. We are still inside the title part.
-                    </p>
-                  </div>
-                  <p className="BodyElement">Body 3 - starts with 2nd Child</p>
-                  <p className="BodyElement">
-                    continues with 3d Child
-                    <br />
-                    <br />
-                    Lorem and Ipsum were here
-                  </p>
-                </AccordionSection>
-              </Accordion>
-            </div>
-          </div>
+  return (
+    <div className="App">
+      <div className="Parts">
+        <div className="Part PartFull">
+          <h1>React-Accordion-Composable Demo</h1>
         </div>
-        <div className="RightPart">
-          <h2>React-Accordion-Composable Demo</h2>
-          <ul>
-            <li>
-              <a
-                href="https://github.com/heroqu/react-accordion-composable-demo"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                demo repo
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/heroqu/react-accordion-composable"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Accordion component repo
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.npmjs.com/package/react-accordion-composable"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Accordion component npm
-              </a>
-            </li>
-          </ul>
-          <h3>Controlling accordion from outside</h3>
+
+        <div className="Part PartLeft">
+          <h2>Accordion in action</h2>
+          <p className="Highlight Petit">
+            (click on the title part of any section and see the effect)
+          </p>
+          <Accordion className="Accordion" msg={state.accordionMsg}>
+            <AccordionSection className="AccordionSection" id="1">
+              <h3 className="Element">Title 1 - a single element</h3>
+              <p className="BodyElement">Body 1 - a single element</p>
+            </AccordionSection>
+            <AccordionSection className="AccordionSection" id="2">
+              <h3 className="Element">Title 2</h3>
+              <p className="BodyElement">Body 2</p>
+            </AccordionSection>
+            <AccordionSection className="AccordionSection" id="3">
+              <div className="Element">
+                <div className="Flex Element">
+                  <h3 className="Flex Element">Title 3</h3>
+                  <h3 className="Flex Element"> - a complex element</h3>
+                </div>
+                <p className="Element">
+                  having a second row. We are still inside the title part that
+                  never collapses.
+                </p>
+              </div>
+              <p className="BodyElement">Body 3 - starts with 2nd Child</p>
+              <p className="BodyElement">
+                continues with 3d Child
+                <br />
+                <br />
+                Lorem and Ipsum were here
+              </p>
+            </AccordionSection>
+          </Accordion>
+        </div>
+
+        <div className="Part PartRight">
+          <h2>Controlling Accordion from outside:</h2>
+          <p className="Highlight">(click on a button and see the effect)</p>
+          <div className="Button"
+            onClick={() => accordionDispatch({ type: actionTypes.accordionOn })}
+          >
+            Accordion On
+          </div>
+          <div className="Explain">
+            Turns ON the Accordion mode, when no more then one section can be in
+            expanded state at any given time. Click this button when several
+            sections are expanded and see that only the first of them stay
+            expanded.
+          </div>
+          <div className="c-button"
+            onClick={() =>
+              accordionDispatch({ type: actionTypes.accordionOff })
+            }
+          >
+            Accordion Off
+          </div>
+          <div className="Explain">
+            Makes all the sections independent: from now on each section can be
+            expanded / collapsed without affecting siblings.
+          </div>
+          <div className="Button"
+            onClick={() => accordionDispatch({ type: actionTypes.collapseAll })}
+          >
+            Collapse All
+          </div>
+          <div className="Explain">
+            Collapses all sections and turns Accordion mode ON
+          </div>
+          <div className="Button"
+            onClick={() => accordionDispatch({ type: actionTypes.expandAll })}
+          >
+            Expand All
+          </div>
+          <div className="Explain">
+            Expands all sections and turns Accordion mode OFF
+          </div>
+          <div className="Button"
+            onClick={() =>
+              accordionDispatch({
+                type: actionTypes.selectIds,
+                ids: ['1', '3'],
+              })
+            }
+          >
+            Select 1 & 3
+          </div>
+          <div className="Explain">
+            Turns Accordion mode OFF and expands sections 1 and 3
+          </div>
+          <div className="Button"
+            onClick={() =>
+              accordionDispatch([
+                //
+                { type: actionTypes.selectIds, ids: ['3'] },
+                { type: actionTypes.accordionOff },
+              ])
+            }
+          >
+            Select 3 & Accordion Off
+          </div>
+          <div className="Explain">
+            Example of dispatching more then one action at a time: expand
+            section 3 only then, as additional action, turn Accordion mode OFF.
+          </div>
+
+          <p>
+            Note, that all the buttons are situated outside of the Accordion
+            element. They <em>talk</em> to Accordion element by{' '}
+            <strong>sending messages with lists of actions</strong> through the
+            props.
+          </p>
+        </div>
+
+        <div className="Part PartFull">
+          <h2>Comments</h2>
           <p>
             While Accordion works autonomously, still we can influence it from
             outside if we like.
@@ -198,9 +173,42 @@ class App extends Component {
             nested inside.
           </p>
         </div>
-      </div>
-    )
-  }
-}
 
-export default App
+        <div className="Part PartFull">
+          <h2>Links</h2>
+          <ul>
+            <li>
+              <a
+                href="https://github.com/heroqu/react-accordion-composable-demo"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                demo repo
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/heroqu/react-accordion-composable"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Accordion component repo
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.npmjs.com/package/react-accordion-composable"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Accordion component npm
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default App;

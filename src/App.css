@@ -1,67 +1,108 @@
 .App {
-  padding: 10px;
+  padding: 0 1em;
+}
+
+.Parts {
   display: flex;
-  text-align: center;
-}
-
-.LeftPart {
-  background-color: hsla(230, 30%, 50%, 0.17);
-  border-radius: 5px;
-  border: solid 1px #888;
-  width: 65%;
-  padding: 10px;
-}
-
-.RightPart {
-  width: 35%;
-  padding: 0 10px 0 20px;
+  flex-flow: wrap;
+  justify-content: center;
   text-align: left;
 }
 
-.Cnt {
-  width: 80%;
-  display: inline-block;
-  margin: auto;
+.Part {
+  flex-grow: 1 1 auto;
+  padding: 0 1em 0.3em 1em;
+  min-width: 30%;
+  margin: 0;
 }
 
+.PartFull {
+  width: 95%;
+}
+
+.PartLeft {
+  max-width: 35%;
+  background-color: #fff;
+  border-radius: 0.2em;
+  box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.25);
+}
+
+.PartRight {
+  max-width: 65%;
+  padding-left: 1.5em;
+}
+
+@media (max-width: 760px) {
+  /*
+   * for small screen all parts go in one column
+   */
+
+  .PartLeft {
+    max-width: 95%;
+  }
+
+  .PartRight {
+    max-width: 95%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .PartLeft {
+    min-width: 30%;
+    max-width: 30%;
+  }
+
+  .PartRight {
+    min-width: 60%;
+    max-width: 60%;
+  }
+}
+
+/* Accordion */
+
 .Accordion {
-  border-radius: 5px;
-  border: solid 1px #888;
-  background-color: hsla(230, 30%, 50%, 0.17);
-  margin: 1px;
-  padding: 5px;
+  /* border-radius: 0.2em; */
+  /* border: solid 1px #ccc; */
+  background-color: hsla(230, 30%, 70%, 0.2);
+  /* margin: 0.1em; */
+  padding: 0.4em;
   text-align: left;
 }
 
 .AccordionSection {
-  border-radius: 5px;
-  border: solid 1px #888;
-  background-color: hsla(230, 30%, 50%, 0.17);
-  margin: 2px;
-  padding: 5px;
-}
+  /* border-radius: 0.2em; */
 
-.Flex {
-  display: flex;
+  border-color: #888;
+  border-style: solid;
+  border-width: 0.05em;
+
+  background-color: hsla(230, 30%, 50%, 0.17);
+  background-color: white;
+  margin: 0.4em 0.4em;
+  padding: 0.2em;
 }
 
 .Element {
-  border-radius: 5px;
   border-color: white;
   border-style: dashed;
-  border-width: 1px;
-  margin: 2px;
-  padding: 2px;
+  border-width: 0.05em;
+  margin: 0.1em;
+  padding: 0.1em 0.2em;
   background-color: hsla(230, 30%, 50%, 0.17);
 }
 
 .BodyElement {
-  border-radius: 5px;
-  margin: 4px 2px;
-  background-color: #ffc;
-  padding: 2px;
+  margin: 0.4em 0.2em;
+  background-color: hsla(50, 100%, 50%, 0.27);
+  padding: 0.4em;
 }
 
 .Highlight {
+  font-size: 0.9em;
   color: #c03;
+}
+
+.Explain {
+  margin: 0.2em 0 0.5em 2em;
+  font-size: 0.9em;
 }
